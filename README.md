@@ -1,17 +1,17 @@
-* This code is intended to serve as the basis for open and free TDD sessions for the [F5 NGO](https://factoriaf5.org/).
+# This code is intended to serve as the basis for open and free TDD sessions for the [F5 NGO](https://factoriaf5.org/).
 
 
-** Building the code
+## Building the code
 
 The repository contains build scripts for Maven and Gradle. For building the project the checked-in Wrappers should be used.
 
-*** Maven
+### Maven
 
 ```
 ./mvnw test
 ```
 
-*** Gradle
+### Gradle
 
 ```
 ./gradlew test
