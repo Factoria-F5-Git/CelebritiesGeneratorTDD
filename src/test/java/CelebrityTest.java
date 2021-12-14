@@ -32,4 +32,16 @@ public class CelebrityTest {
         Assertions.assertTrue(celebrities.size() ==6);
     }
 
+    @Test
+    public void showThreeSingers(){
+        // Arrange - preparamos
+        CelebrityGenerator generator = new CelebrityGenerator();
+        List<Celebrity> celebrities = generator.getCelebrities();
+        // Act- ejecutamos
+
+        // Assert - comprobamos
+        Assertions.assertEquals(celebrities.stream()
+                .filter(celebrity -> celebrity.getProfession().equals("Singer")).toArray().length,3);
+    }
+
 }
