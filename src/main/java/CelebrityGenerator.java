@@ -17,15 +17,25 @@ import java.util.List;
 // dead. Tip: Assert only one is dead
 
  class Celebrity {
+     private String name;
 
+     public Celebrity(String name) {
+         this.name = name;
+     }
  }
+
 
 public class CelebrityGenerator {
 
     public List<Celebrity> getCelebrities(){
+        List<Celebrity> celebrities = new ArrayList<>();
+        celebrities.add(new Celebrity("Britney Spears"));
+        celebrities.add(new Celebrity("Antonio Banderas"));
+        celebrities.add(new Celebrity("Conchita Wurst"));
+        celebrities.add(new Celebrity("Luciano Pavarotti"));
+        celebrities.add(new Celebrity("Barack Obama"));
+        celebrities.add(new Celebrity("Fidel Castro"));
 
-
-
-        return null;
+        return celebrities;
     }
 }
