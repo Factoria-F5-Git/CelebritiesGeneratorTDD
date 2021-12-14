@@ -19,14 +19,20 @@ import java.util.List;
  class Celebrity {
      private String name;
      private String profession;
+     private String country;
 
-     public Celebrity(String name, String profession) {
+     public Celebrity(String name, String profession, String country) {
          this.name = name;
          this.profession= profession;
+         this.country = country;
      }
 
      public String getProfession() {
          return profession;
+     }
+
+     public String getCountry() {
+         return country;
      }
  }
 
@@ -35,12 +41,12 @@ public class CelebrityGenerator {
 
     public List<Celebrity> getCelebrities(){
         List<Celebrity> celebrities = new ArrayList<>();
-        celebrities.add(new Celebrity("Britney Spears", "Singer"));
-        celebrities.add(new Celebrity("Antonio Banderas", "Actor" ));
-        celebrities.add(new Celebrity("Conchita Wurst", "Singer"));
-        celebrities.add(new Celebrity("Luciano Pavarotti", "Singer"));
-        celebrities.add(new Celebrity("Barack Obama", "Politician"));
-        celebrities.add(new Celebrity("Fidel Castro", "Politician"));
+        celebrities.add(new Celebrity("Britney Spears", "Singer", "US"));
+        celebrities.add(new Celebrity("Antonio Banderas", "Actor", "España" ));
+        celebrities.add(new Celebrity("Conchita Wurst", "Singer", "Austria"));
+        celebrities.add(new Celebrity("Luciano Pavarotti", "Singer", "Italia"));
+        celebrities.add(new Celebrity("Barack Obama", "Politician", "US"));
+        celebrities.add(new Celebrity("Fidel Castro", "Politician", "Cuba"));
 
         return celebrities;
     }

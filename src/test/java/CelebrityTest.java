@@ -44,4 +44,17 @@ public class CelebrityTest {
                 .filter(celebrity -> celebrity.getProfession().equals("Singer")).toArray().length,3);
     }
 
+    //3. Add country to the Celebrity object.  Tip: assert there are 2 US citizen
+    @Test
+    public void showTwoAreUsCitizens(){
+        // Arrange - preparamos
+        CelebrityGenerator generator = new CelebrityGenerator();
+        List<Celebrity> celebrities = generator.getCelebrities();
+        // Act- ejecutamos
+
+        // Assert - comprobamos
+        Assertions.assertEquals(2, celebrities.stream()
+                .filter(celebrity -> celebrity.getCountry().equals("US")).toArray().length);
+    }
+
 }
